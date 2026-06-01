@@ -5,7 +5,10 @@ const USUARIOS = {
   prefeitura: { senha: 'pref@456', perfil: 'prefeitura'}
 };
 
+
 let perfilAtivo = null;
+
+
 
 
 function realizarLogin() {
@@ -15,17 +18,16 @@ function realizarLogin() {
   if (USUARIOS[usuario] && USUARIOS[usuario].senha === senha) {
     perfilAtivo = USUARIOS[usuario];
     sessionStorage.setItem("perfilAtivo", JSON.stringify(perfilAtivo));
+    window.location.href = "./Telas/home.html";
 
-    if(perfilAtivo.perfil == 'tutor'){
-
-      window.location.href = "./Telas/Tutor/tutor_home.html";
-    }
     
   } else {
     alerta.classList.remove('esconde');
     document.getElementById('inp-senha').value = '';
   }
 }
+
+
 
 document.getElementById('inp-senha').addEventListener('keydown', e => { if (e.key === 'Enter') realizarLogin(); });
 document.getElementById('inp-usuario').addEventListener('keydown', e => { if (e.key === 'Enter') realizarLogin(); });
