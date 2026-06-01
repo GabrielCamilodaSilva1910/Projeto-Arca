@@ -26,6 +26,7 @@ body {
     display: flex;
     margin: 0;
     height: 100%;
+    background-attachment: fixed;
 }
 
 
@@ -128,6 +129,8 @@ nav.menu-lateral {
     background: linear-gradient(135deg, var(--verde-esc) 0%, var(--verde-cla));
     border-right: 0;
     flex-shrink: 0;
+    position: fixed;
+    height: 100%;
 }
 
 nav.menu-lateral a {
@@ -141,7 +144,7 @@ nav.menu-lateral a {
     transition: all .2s;
 }
 
-nav.menu-lateral a:hover {
+nav.menu-lateral a:hover, nav.menu-lateral a#home {
     background: var(--verde-lt);
     color: var(--verde);
     border-left-color: var(--verde);
@@ -156,4 +159,19 @@ nav.menu-lateral a .icone {
 
 .conteudo {
     margin-left: 10px;
+}
+
+@media (max-width: 320px) {
+    .logo{
+        display: none;
+    }
+    .perfil{
+        display: none;
+    }
+    h2{
+        display: none;
+    }
+    .topo{
+        padding: 15px 10px;
+    }
 }

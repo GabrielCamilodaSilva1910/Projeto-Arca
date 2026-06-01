@@ -13,11 +13,6 @@
 }
 
 
-
-html {
-    height: 100%;
-}
-
 body {
     font-family: 'Nunito', sans-serif;
     color: var(--texto);
@@ -27,13 +22,14 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #1b4332 0%, var(--verde-esc) 50%, var(--verde) 100%);
+    background-attachment: fixed;
 }
 
 
 /*Card principal*/
 
 .login-card {
-    margin-top: 100px;
+    margin: 100px 20px;
     background: var(--branco);
     border-radius: 24px;
     padding: 40px 32px;

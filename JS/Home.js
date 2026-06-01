@@ -18,29 +18,29 @@ function sair() {
 // obejeto de cada menu de acordo com o perfil
 const MENUS = {
   tutor: [
-    { local: 'dashboard',  icone: '🏠', label: 'Início' },
-    { local: 'meu-pet',    icone: '🐶', label: 'Meu Pet' },
-    { local: 'castracaoT', icone: '✂️', label: 'Solicitar Castração' },
-    { local: 'resgateT',   icone: '🚨', label: 'Solicitar Resgate' },
+    { id:'home', local: 'home.html',  icone: '🏠', label: 'Início' },
+    { id: 'meu-pet', local: './Tutor/meuPet.html',    icone: '🐶', label: 'Meu Pet' },
+    { id: 'castracaoT', local: 'castracaoT', icone: '✂️', label: 'Solicitar Castração' },
+    { id: 'resgateT', local: 'resgateT',   icone: '🚨', label: 'Solicitar Resgate' },
   ],
   candidato: [
-    { local: 'dashboard',  icone: '🏠', label: 'Início' },
-    { local: 'adocao',     icone: '❤️', label: 'Adotar Animal' },
-    { local: 'minha-adocao', icone: '📋', label: 'Minha Solicitação' },
-    { local: 'denuncia',   icone: '📣', label: 'Denúncia Maus-tratos' },
+    { id:'home', local: 'dashboard',  icone: '🏠', label: 'Início' },
+    { id: 'adocao',  local: 'adocao',     icone: '❤️', label: 'Adotar Animal' },
+    { id: 'minha-adocao', local: 'minha-adocao', icone: '📋', label: 'Minha Solicitação' },
+    { id: 'denuncia', local: 'denuncia', icone: '📣', label: 'Denúncia Maus-tratos' },
   ],
   ong: [
-    { local: 'dashboard',  icone: '🏠', label: 'Início' },
-    { local: 'animais-ong', icone: '🐾', label: 'Animais Cadastrados' },
-    { local: 'resgates-ong', icone: '🚑', label: 'Resgates' },
-    { local: 'relatorio-ong', icone: '📊', label: 'Relatório' },
+    { id:'home', local: 'dashboard',  icone: '🏠', label: 'Início' },
+    { id: 'animais-ong', local: 'animais-ong', icone: '🐾', label: 'Animais Cadastrados' },
+    { id: 'resgates-ong', local: 'resgates-ong', icone: '🚑', label: 'Resgates' },
+    { id: 'relatorio-ong', local: 'relatorio-ong', icone: '📊', label: 'Relatório' },
   ],
   prefeitura: [
-    { local: 'dashboard',   icone: '🏠', label: 'Painel Geral' },
-    { local: 'gestao-animais', icone: '🐾', label: 'Gestão de Animais' },
-    { local: 'gestao-adocoes', icone: '❤️', label: 'Adoções' },
-    { local: 'gestao-castracao', icone: '✂️', label: 'Castrações' },
-    { local: 'gestao-denuncias', icone: '📣', label: 'Denúncias' },
+    { id:'home', local: 'dashboard',   icone: '🏠', label: 'Painel Geral' },
+    { id: 'gestao-animais', local: 'gestao-animais', icone: '🐾', label: 'Gestão de Animais' },
+    { id: 'gestao-adocoes', local: 'gestao-adocoes', icone: '❤️', label: 'Adoções' },
+    { id: 'gestao-castracao', local: 'gestao-castracao', icone: '✂️', label: 'Castrações' },
+    { id: 'gestao-denuncias', local: 'gestao-denuncias', icone: '📣', label: 'Denúncias' },
   ]
 };
 
@@ -49,7 +49,7 @@ function construirMenu() {
   const menu = document.getElementById('menu-lateral');
   const itens = MENUS[perfilAtivo.perfil] || [];
   menu.innerHTML = itens.map(i =>
-    `<a href="${i.local}">
+    `<a id="${i.id}" href="${i.local}">
        <div class="icone">${i.icone}</div> ${i.label}
      </a>`
   ).join('');

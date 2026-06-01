@@ -1,0 +1,369 @@
+/*Variasveis do projeto para mudar tude de uma vez*/
+:root {
+    --verde-esc: #2d6a4f;
+    --verde: #40916c;
+    --verde-cla: #74c69d;
+    --verde-lt: #d8f3dc;
+    --laranja: #f4845f;
+    --cinza: #e0e0d8;
+    --texto: #1b1b1b;
+    --branco: #ffffff;
+    --sombra: 0 4px 24px rgba(45, 106, 79, .13);
+    --radius: 14px;
+}
+
+
+html {
+    height: 100%;
+}
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--verde-lt);
+    color: var(--texto);
+    flex-direction: column;
+    display: flex;
+    margin: 0;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+
+
+/*Barra de cima*/
+.topo {
+    background: var(--verde-esc);
+    color: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+}
+
+
+/* menu da esquerda */
+.topo-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-logo {
+    margin-right: 20px;
+    background: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-logo img {
+
+    width: 25px;
+    height: 25px;
+    /* deixa o icone de preto para branco */
+    filter: invert(1);
+}
+
+.logo {
+    width: 50px;
+    margin: 0;
+}
+
+
+/* perfil da direita */
+.topo-perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.perfil {
+    background: var(--laranja);
+    border-radius: 100px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: all .2s;
+}
+
+.perfil:hover {
+    background: var(--verde-cla);
+}
+
+/* Botão sair */
+.btn-sair {
+    background: var(--verde);
+    border: none;
+    color: var(--branco);
+    border-radius: 100px;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.btn-sair:hover {
+    background: var(--verde-cla);
+}
+
+
+/* area embaixo do topo */
+.area-principal {
+    display: flex;
+    flex: 1;
+    overflow-x: hidden;
+}
+
+/* menu-lateral lateral */
+nav.menu-lateral.aberto {
+    display: block;
+    z-index: 1000;
+}
+
+
+nav.menu-lateral {
+    display: none;
+    width: 220px;
+    background: linear-gradient(135deg, var(--verde-esc) 0%, var(--verde-cla));
+    border-right: 0;
+    flex-shrink: 0;
+    position: fixed;
+    height: 100%;
+}
+
+nav.menu-lateral a {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 11px 22px;
+    color: var(--branco);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+nav.menu-lateral a:hover,
+nav.menu-lateral a#meu-pet {
+    background: var(--verde-lt);
+    color: var(--verde);
+    border-left-color: var(--verde);
+}
+
+nav.menu-lateral a .icone {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* conteúdo */
+
+.conteudo {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 320px) {
+    .logo {
+        display: none;
+    }
+
+    .perfil {
+        display: none;
+    }
+
+    h2 {
+        display: none;
+    }
+
+    .topo {
+        padding: 15px 10px;
+    }
+}
+
+
+
+
+input ,select{
+    width: 100%;
+    padding: 11px 16px;
+    border: 2px solid var(--cinza);
+    border-radius: var(--radius);
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    background: var(--branco);
+    transition: border .2s;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input:focus ,select:focus{
+    border-color: var(--verde);
+}
+
+
+
+
+
+
+.btn-cadastro {
+    margin: 150px 75px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    border-radius: 100px;
+    border: var(--verde) solid 2px;
+    background: var(--cinza);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.btn-cadastro:hover {
+    background: var(--verde-cla);
+}
+
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--verde-esc);
+}
+
+h3 {
+    color: var(--verde-esc);
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    background: var(--branco);
+    border-radius: var(--radius);
+    box-shadow: var(--sombra);
+    padding: 20px;
+    gap: 5px;
+    margin: 15px 20px 20px 5px;
+}
+
+.cad-corpo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.lado-lado {
+    margin-top: 20px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-cadastro {
+    display: block;
+    background: var(--branco);
+    border-radius: var(--radius);
+    padding: 32px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 864px;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .3);
+}
+
+.fundo-cadastro.aberto {
+    display: flex;
+}
+
+.fundo-cadastro {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+    padding: 1rem;
+}
+
+/* melhor esse css */
+.btn-fechar {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+}
+
+.btn-salvar {
+    width: 100%;
+    height:50px;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 100px;
+    border: var(--verde) solid 2px;
+    background: var(--verde-cla);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.btn-salvar:hover {
+    background: var(--verde-lt);
+    border-color: var(--verde-cla);
+}
+
+
+.titulo-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+/* css pra conferir */
+.tag {
+    display: inline-block;
+    padding: .25rem .75rem;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.tag-verde {
+    background: var(--verde-lt);
+    color: var(--verde-esc);
+}
+
+.tag-azul {
+    background: #d6eaf8;
+    color: #1a5276;
+}
+
+
+
+
+
+
+
+
+
+
