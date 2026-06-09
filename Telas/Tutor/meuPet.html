@@ -24,64 +24,8 @@
     <div class="area-principal">
         <nav class="menu-lateral" id="menu-lateral"></nav>
         <main class="conteudo" id="conteudo">
+            
 
-            <!-- refazer esse card pra funcionar no CRUD e não ficar assim feio-->
-            <div class="card" style="max-width:480px;margin-bottom:1rem;">
-                <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
-                    <div style="font-size:3.5rem;">🐶</div>
-                    <div>
-                        <h3>Bolinha</h3>
-                        <span class="tag tag-verde">Cão</span>
-                        <span class="tag tag-azul" style="margin-left:.3rem;">Vira-lata</span>
-                    </div>
-                </div>
-                <div class="cad-corpo">
-                    <div><label>Idade</label>
-                        <p>2 anos</p>
-                    </div>
-                    <div><label>Sexo</label>
-                        <p>Macho</p>
-                    </div>
-                    <div><label>Peso</label>
-                        <p>8 kg</p>
-                    </div>
-                    <div><label>Castrado?</label>
-                        <p>Não</p>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <div class="card" style="max-width:480px;margin-bottom:1rem;">
-                <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
-                    <div style="font-size:3.5rem;">🐶</div>
-                    <div>
-                        <h3>Bolinha</h3>
-                        <span class="tag tag-verde">Cão</span>
-                        <span class="tag tag-azul" style="margin-left:.3rem;">Vira-lata</span>
-                    </div>
-                </div>
-                <div class="cad-corpo">
-                    <div><label>Idade</label>
-                        <p>2 anos</p>
-                    </div>
-                    <div><label>Sexo</label>
-                        <p>Macho</p>
-                    </div>
-                    <div><label>Peso</label>
-                        <p>8 kg</p>
-                    </div>
-                    <div><label>Castrado?</label>
-                        <p>Não</p>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <button class="btn-cadastro" onclick="abrirCadastroPet()">+ Cadastrar novo pet</button>
         </main>
     </div>
 </body>
@@ -96,39 +40,51 @@
             <!-- trocar por um icone -->
             <button class="btn-fechar" onclick="fecharCadastroPet()">X</button>
         </div>
-        <div>
-            <label>Nome do pet:</label><input type="text">
+        <form>
+            <label>Nome do pet:</label>
+            <input type="text" name="nomePet" id="nomePet" placeholder="Escreva o nome do Pet">
+
             <div class="lado-lado">
-                <label>Espécie:</label><select>
-                    <option>Cão</option>
-                    <option>Gato</option>
+
+                <label>Espécie:</label>
+                <select type="text" name="especie" id="especie">
+                    <option value="Cão">Cão</option>
+                    <option value="Gato">Gato</option>
                 </select>
-                <label>Raça:</label><input type="text">
+
+                <label>Raça:</label>
+                <input type="text" name="raca" id="raca" placeholder="Raça do Pet">
             </div>
+
             <div class="lado-lado">
                 <label>Idade:</label>
-                <input type="text">
+                <input type="text" name="idade" id="idade" placeholder="Ex: 2 anos">
 
-                <label>Sexo:</label><select>
-                    <option>Macho</option>
-                    <option>Femia</option>
+                <label>Sexo:</label>
+                <select type="text" name="sexo" id="sexo">
+                    <option value="Macho">Macho</option>
+                    <option value="Fêmea">Fêmea</option>
                 </select>
             </div>
-            <div class="lado-lado">
-                <label>Peso:</label>
-                <input type="text">
-                <!-- tem q arrumar pra ficar um do lado do outro -->
-                <div style="display: flex; align-items: center;">
+            <div style="display: flex; align-items: center ;gap: 10px; margin-top: 20px;">
+
+                <div style="display: flex; align-items: center ;gap: 10px;">
+                    <label>Peso:</label>
+                    <input type="text" name="peso" id="peso" placeholder="Ex: 8 kg"
+                        style="max-width: 300px;">
+                </div>
+
+                <div>
                     <label>Castrado:</label>
-                    <form>
-                        <input type="radio" id="opcao" name="opcao" value="sim">Sim
-                        <input type="radio" id="opcao" name="opcao" value="nao">Não
-                    </form>
+                    <div style="display: flex; justify-content: space-between;">
+                        <input type="radio" id="opcaoSim" name="opcao" value="Sim">Sim
+                        <input type="radio" id="opcaoNão" name="opcao" value="Não">Não
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- criar a função de salvar pet-->
-        <button class="btn-salvar" onclick="fecharCadastroPet()">Salvar</button>
+
+            <button type="reset" class="btn-salvar" onclick="salvarCadastroPet()">Salvar</button>
+        </form>
     </div>
 </div>
 </div>

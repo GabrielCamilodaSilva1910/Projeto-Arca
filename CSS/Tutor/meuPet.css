@@ -253,6 +253,17 @@ h3 {
     margin: 15px 20px 20px 5px;
 }
 
+.card-topo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom: 15px;
+}
+
+.card-foto{
+    font-size: 60px;
+}
+
 .cad-corpo {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -304,10 +315,10 @@ h3 {
 }
 
 .btn-salvar {
+    margin-top: 20px;
     width: 100%;
     height:50px;
     justify-content: center;
-    margin-top: 10px;
     text-align: center;
     border-radius: 100px;
     border: var(--verde) solid 2px;
