@@ -39,7 +39,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-
 }
 
 
@@ -47,7 +46,7 @@ body {
 .topo-menu {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
 }
 
 .menu-logo {
@@ -150,7 +149,6 @@ nav.menu-lateral a:hover,
 nav.menu-lateral a#meu-pet {
     background: var(--verde-lt);
     color: var(--verde);
-    border-left-color: var(--verde);
 }
 
 nav.menu-lateral a .icone {
@@ -189,7 +187,8 @@ nav.menu-lateral a .icone {
 
 
 
-input ,select{
+input,
+select {
     width: 100%;
     padding: 11px 16px;
     border: 2px solid var(--cinza);
@@ -202,7 +201,8 @@ input ,select{
     box-sizing: border-box;
 }
 
-input:focus ,select:focus{
+input:focus,
+select:focus {
     border-color: var(--verde);
 }
 
@@ -253,18 +253,18 @@ h3 {
     margin: 15px 20px 20px 5px;
 }
 
-.card-topo{
-    display:flex;
-    align-items:center;
-    gap:15px;
+.card-topo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     margin-bottom: 15px;
 }
 
-.card-foto{
+.card-foto {
     font-size: 60px;
 }
 
-.cad-corpo {
+.card-corpo {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
@@ -305,19 +305,65 @@ h3 {
     padding: 1rem;
 }
 
-/* melhor esse css */
+
 .btn-fechar {
+    margin-right: 20px;
     background: none;
     border: none;
-    font-size: 20px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
-    color: #888;
 }
+
+.btn-fechar img {
+    width: 25px;
+    height: 25px;
+}
+
+
+.btn-altera {
+    margin-right: 15px;
+    background: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+}
+
+.btn-altera img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.btn-exclui {
+    margin-right: 10px;
+    background: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.btn-exclui img {
+    width: 20px;
+    height: 20px;
+    transition: all .2s;
+}
+
+.btn-exclui img:hover {
+    filter: invert(9%) sepia(96%) saturate(7445%) hue-rotate(2deg) brightness(110%) contrast(115%);
+}
+
+
+
 
 .btn-salvar {
     margin-top: 20px;
     width: 100%;
-    height:50px;
+    height: 50px;
     justify-content: center;
     text-align: center;
     border-radius: 100px;
@@ -348,6 +394,16 @@ h3 {
 
 
 
+
+.titulo {
+    font-size: 1.5rem;
+    color: var(--verde-esc);
+    margin-bottom: 1.2rem;
+    border-left: 4px solid var(--laranja);
+    padding-left: .8rem;
+}
+
+
 /* css pra conferir */
 .tag {
     display: inline-block;
@@ -368,13 +424,3 @@ h3 {
     background: #d6eaf8;
     color: #1a5276;
 }
-
-
-
-
-
-
-
-
-
-

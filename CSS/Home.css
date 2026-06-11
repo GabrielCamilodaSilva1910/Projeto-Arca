@@ -147,7 +147,6 @@ nav.menu-lateral a {
 nav.menu-lateral a:hover, nav.menu-lateral a#home {
     background: var(--verde-lt);
     color: var(--verde);
-    border-left-color: var(--verde);
 }
 
 nav.menu-lateral a .icone {

@@ -14,7 +14,7 @@
             <button class="menu-logo" onclick="abreMenu()"><img src="../../Imagens/Icones/menu-de-hamburguer.png"
                     alt="Menu Lateral"></button>
             <img class="logo" src="../../Imagens/Logo.png" alt="Logo do Site">
-            <h2>Meu Pet</h2>
+            <h2>ARCA</h2>
         </div>
         <div class="topo-perfil">
             <div class="perfil" id="perfil">Perfil</div>
@@ -23,22 +23,23 @@
     </div>
     <div class="area-principal">
         <nav class="menu-lateral" id="menu-lateral"></nav>
-        <main class="conteudo" id="conteudo">
-            
+        <div>
+            <h2 class="titulo">🐶 Meu Pet</h2>
+            <main class="conteudo" id="conteudo"></main>
 
-        </main>
+        </div>
     </div>
 </body>
 
 </html>
 <script src="../../JS/Tutor/meuPet.js"></script>
 
-<div class="fundo-cadastro" id="fundo-cadastro">
-    <div class="card-cadastro" id="card-cadastro">
+<div class="fundo-cadastro" id="fundo_cadastro">
+    <div class="card-cadastro" id="card_cadastro">
         <div class="titulo-card">
             <h3>Cadastrar Novo Pet</h3>
-            <!-- trocar por um icone -->
-            <button class="btn-fechar" onclick="fecharCadastroPet()">X</button>
+            <button class="btn-fechar" onclick="fecharCadastroPet()"><img src="../../Imagens/Icones/cruz.png"
+                    alt="Botão de fechar"></button>
         </div>
         <form>
             <label>Nome do pet:</label>
@@ -70,15 +71,14 @@
 
                 <div style="display: flex; align-items: center ;gap: 10px;">
                     <label>Peso:</label>
-                    <input type="text" name="peso" id="peso" placeholder="Ex: 8 kg"
-                        style="max-width: 300px;">
+                    <input type="text" name="peso" id="peso" placeholder="Ex: 8 kg" style="max-width: 300px;">
                 </div>
 
                 <div>
                     <label>Castrado:</label>
                     <div style="display: flex; justify-content: space-between;">
-                        <input type="radio" id="opcaoSim" name="opcao" value="Sim">Sim
-                        <input type="radio" id="opcaoNão" name="opcao" value="Não">Não
+                        <input type="radio" id="Sim" name="opcao" value="Sim">Sim
+                        <input type="radio" id="Nao" name="opcao" value="Não">Não
                     </div>
                 </div>
             </div>
@@ -87,4 +87,61 @@
         </form>
     </div>
 </div>
+
+
+
+
+<div class="fundo-cadastro" id="fundo_altera">
+    <div class="card-cadastro" id="card_altera">
+        <div class="titulo-card">
+            <h3>Alterar Pet</h3>
+            <button class="btn-fechar" onclick="fecharAlteraPet()"><img src="../../Imagens/Icones/cruz.png"
+                    alt="Botão de fechar"></button>
+        </div>
+        <form>
+            <label>Nome do pet:</label>
+            <input type="text" name="AlteraNomePet" id="AlteraNomePet" placeholder="Escreva o nome do Pet">
+
+            <div class="lado-lado">
+
+                <label>Espécie:</label>
+                <select type="text" name="AlteraEspecie" id="AlteraEspecie">
+                    <option value="Cão">Cão</option>
+                    <option value="Gato">Gato</option>
+                </select>
+
+                <label>Raça:</label>
+                <input type="text" name="AlteraRaca" id="AlteraRaca" placeholder="Raça do Pet">
+            </div>
+
+            <div class="lado-lado">
+                <label>Idade:</label>
+                <input type="text" name="AlteraIdade" id="AlteraIdade" placeholder="Ex: 2 anos">
+
+                <label>Sexo:</label>
+                <select type="text" name="AlteraSexo" id="AlteraSexo">
+                    <option value="Macho">Macho</option>
+                    <option value="Fêmea">Fêmea</option>
+                </select>
+            </div>
+            <div style="display: flex; align-items: center ;gap: 10px; margin-top: 20px;">
+
+                <div style="display: flex; align-items: center ;gap: 10px;">
+                    <label>Peso:</label>
+                    <input type="text" name="AlteraPeso" id="AlteraPeso" placeholder="Ex: 8 kg"
+                        style="max-width: 300px;">
+                </div>
+
+                <div>
+                    <label>Castrado:</label>
+                    <div style="display: flex; justify-content: space-between;">
+                        <input type="radio" id="AlteraSim" name="AlteraOpcao" value="Sim">Sim
+                        <input type="radio" id="AlteraNao" name="AlteraOpcao" value="Não">Não
+                    </div>
+                </div>
+            </div>
+
+            <button type="reset" class="btn-salvar" onclick="alterarCadastroPet(petIdSelecionado)">Salvar</button>
+        </form>
+    </div>
 </div>
