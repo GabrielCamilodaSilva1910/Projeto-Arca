@@ -30,7 +30,7 @@ function PetsSessao() {
   } else {
 
     PETS = [
-      { p_id: 0, p_nomePet: 'Bolinha', p_especie: 'Cão', p_raca: 'Vira-lata', p_idade: '2 anos', p_sexo: 'Macho', p_peso: '8 kg', p_castrado: 'Não', p_foto: '🐶' }
+      { p_id: 0, p_nomePet: 'Bolinha', p_especie: 'Cão', p_raca: 'Vira-lata', p_idade: '2 anos', p_sexo: 'Macho', p_peso: '8 kg', p_castrado: 'Não', p_foto: '&#x1F436' }
     ];
     
 

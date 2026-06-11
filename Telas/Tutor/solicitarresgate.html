@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../CSS/Tutor/solicitarresgate.css">
+  <title>Solicitar Resgate</title>
+</head>
+
+<body>
+  <div class="topo">
+    <div class="topo-menu">
+      <button class="menu-logo" onclick="abreMenu()"><img src="../../Imagens/Icones/menu-de-hamburguer.png"
+          alt="Menu Lateral"></button>
+        <img class="logo" src="../../Imagens/Logo.png" alt="Logo do Site">
+        <h2>ARCA</h2>
+    </div>
+    <div class="topo-perfil">
+      <div class="perfil" id="perfil">Perfil</div>
+      <button class="btn-sair" onclick="sair()">Sair</button>
+    </div>
+  </div>
+  <div class="area-principal">
+    <nav class="menu-lateral" id="menu-lateral"></nav>
+    <main class="conteudo" id="conteudo">
+
+      <h2 class="titulo">&#x1F6A8; Solicitar Resgate</h2>
+      <div class="card">
+        <div class="alert">
+          ⚠️ Para emergências com risco de vida imediato, ligue para a central: <strong>(27) 3291-2222</strong>
+        </div>
+        <div class="form-group"><label>Endereço do animal</label><input type="text" placeholder="Rua, número, bairro">
+        </div>
+        <div class="form-group"><label>Ponto de referência</label><input type="text"
+            placeholder="Ex: próximo ao mercado X"></div>
+        <div class="form-group"><label>Descrição do animal</label><textarea rows="2"
+            placeholder="Porte, cor, condição observada"></textarea></div>
+        <div class="form-group"><label>Situação observada</label>
+          <select>
+            <option>Animal ferido</option>
+            <option>Animal doente</option>
+            <option>Animal em risco</option>
+            <option>Animal abandonado</option>
+          </select>
+        </div>
+        <div class="mapa">🗺️<span>Clique para marcar localização no mapa</span></div>
+        <button class="btn-enviar" onclick=enviar()>Solicitar Resgate</button>
+      </div>
+
+    </main>
+  </div>
+</body>
+
+</html>
+<script src="../../JS/Tutor/solicitarresgate.js"></script>

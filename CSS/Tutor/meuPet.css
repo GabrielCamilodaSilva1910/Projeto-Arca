@@ -8,6 +8,7 @@
     --cinza: #e0e0d8;
     --texto: #1b1b1b;
     --branco: #ffffff;
+    --offwhite: #f5f5f0;
     --sombra: 0 4px 24px rgba(45, 106, 79, .13);
     --radius: 14px;
 }
@@ -20,7 +21,7 @@ html {
 
 body {
     font-family: 'Nunito', sans-serif;
-    background: var(--verde-lt);
+    background: var(--offwhite);
     color: var(--texto);
     flex-direction: column;
     display: flex;
@@ -137,8 +138,8 @@ nav.menu-lateral {
 nav.menu-lateral a {
     display: flex;
     align-items: center;
-    gap: 11px;
-    padding: 11px 22px;
+    gap: 10px;
+    padding: 10px 20px;
     color: var(--branco);
     font-weight: bold;
     text-decoration: none;
@@ -152,7 +153,6 @@ nav.menu-lateral a#meu-pet {
 }
 
 nav.menu-lateral a .icone {
-    font-weight: bold;
     text-align: center;
 }
 
@@ -166,7 +166,7 @@ nav.menu-lateral a .icone {
     justify-content: center;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
     .logo {
         display: none;
     }
@@ -390,29 +390,22 @@ h3 {
 
 
 
-
-
-
-
-
 .titulo {
-    font-size: 1.5rem;
+    font-size: 25px;
     color: var(--verde-esc);
-    margin-bottom: 1.2rem;
+    margin-bottom: 20px;
     border-left: 4px solid var(--laranja);
-    padding-left: .8rem;
+    padding-left: 12px;
 }
 
 
 /* css pra conferir */
 .tag {
-    display: inline-block;
-    padding: .25rem .75rem;
-    border-radius: 999px;
-    font-size: .78rem;
+    padding: 5px 12px;
+    border-radius: 100px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: .04em;
 }
 
 .tag-verde {

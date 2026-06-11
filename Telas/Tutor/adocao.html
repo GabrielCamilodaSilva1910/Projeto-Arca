@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../CSS/Tutor/adocao.css">
+  <title>Adoções</title>
+</head>
+
+<body>
+  <div class="topo">
+    <div class="topo-menu">
+      <button class="menu-logo" onclick="abreMenu()"><img src="../../Imagens/Icones/menu-de-hamburguer.png"
+          alt="Menu Lateral"></button>
+      <img class="logo" src="../../Imagens/Logo.png" alt="Logo do Site">
+      <h2>ARCA</h2>
+    </div>
+    <div class="topo-perfil">
+      <div class="perfil" id="perfil">Perfil</div>
+      <button class="btn-sair" onclick="sair()">Sair</button>
+    </div>
+  </div>
+  <div class="area-principal">
+    <nav class="menu-lateral" id="menu-lateral"></nav>
+    <main class="conteudo" id="conteudo">
+
+      <h2 class="titulo">&#x1F43E; Animais para Adoção</h2>
+      <div class="busca-bar">
+        <input type="text" placeholder="Buscar por nome..." id="busca-input" oninput="filtrarAnimais()">
+        <select id="busca-especie" onchange="filtrarAnimais()">
+          <option value="">Todas as espécies</option>
+          <option>Cão</option>
+          <option>Gato</option>
+        </select>
+      </div>
+      <div class="animal-card" id="lista-animais">
+        <div class="animal-foto">&#x1F436;</div>
+        <div class="animal-info">
+          <h4>Bolinha</h4>
+          <p>Cão · Vira-lata · 2 anos</p>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="tag tag-verde">DISPONÍVEL</span>
+            <button class="btn-adotar">Quero Adotar</button>
+          </div>
+        </div>
+      </div>
+
+
+    </main>
+  </div>
+</body>
+
+</html>
+<script src="../../JS/Tutor/adocao.js"></script>

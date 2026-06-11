@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../CSS/Tutor/solicitarcastracao.css">
+  <title>Solicitar Castração</title>
+</head>
+
+<body>
+  <div class="topo">
+    <div class="topo-menu">
+      <button class="menu-logo" onclick="abreMenu()"><img src="../../Imagens/Icones/menu-de-hamburguer.png"
+          alt="Menu Lateral"></button>
+      <img class="logo" src="../../Imagens/Logo.png" alt="Logo do Site">
+      <h2>ARCA</h2>
+    </div>
+    <div class="topo-perfil">
+      <div class="perfil" id="perfil">Perfil</div>
+      <button class="btn-sair" onclick="sair()">Sair</button>
+    </div>
+  </div>
+  <div class="area-principal">
+    <nav class="menu-lateral" id="menu-lateral"></nav>
+    <main class="conteudo" id="conteudo">
+
+      <h2 class="titulo">&#x1FA7A; Solicitar Castração</h2>
+      <div class="card">
+        <p style="font-size:.88rem;color:#555;margin-bottom:1rem;">Preencha o formulário abaixo para solicitar o
+          cadastro no programa de castração gratuita.</p>
+        <div class="form-group"><label>Nome do pet</label><input type="text" value="Bolinha"></div>
+        <div class="info">
+          <div class="form-group"><label>Espécie</label>
+            <select>
+              <option>Cão</option>
+              <option>Gato</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Sexo</label>
+            <select>
+              <option>Macho</option>
+              <option>Fêmea</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><label>Raça</label><input type="text" placeholder="Ex: Vira-lata"></div>
+        <div class="form-group"><label>Idade aproximada</label><input type="text" placeholder="Ex: 2 anos"></div>
+        <div class="form-group"><label>Observações de saúde</label><textarea rows="2"
+            placeholder="Descreva condições relevantes"></textarea></div>
+        <button class="btn-enviar" onclick=enviar()>Enviar Solicitação</button>
+      </div>
+      
+
+    </main>
+  </div>
+</body>
+
+</html>
+<script src="../../JS/Tutor/solicitarcastracao.js"></script>

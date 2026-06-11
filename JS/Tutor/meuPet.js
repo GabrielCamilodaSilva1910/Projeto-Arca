@@ -11,10 +11,20 @@ let PETS = JSON.parse(sessionStorage.getItem("PETS"));
 
 const MENUS = {
   tutor: [
-    { id: 'home', local: '../home.html', icone: '🏠', label: 'Início' },
-    { id: 'meu-pet', local: 'meuPet.html', icone: '🐶', label: 'Meu Pet' },
-    { id: 'castracaoT', local: 'castracaoT', icone: '✂️', label: 'Solicitar Castração' },
-    { id: 'resgateT', local: 'resgateT', icone: '🚨', label: 'Solicitar Resgate' },
+    { id:'home', local: '../home.html',  icone: '&#x1F3E0;', label: 'Início' },
+    { id: 'meu-pet', local: './meuPet.html',    icone: '&#x1F436;', label: 'Meu Pet' },
+    { id: 'castracaoT', local: './solicitarcastracao.html', icone: '&#x1FA7A;', label: 'Solicitar Castração' },
+    { id: 'resgateT', local: './solicitarresgate.html',   icone: '&#x1F6A8;', label: 'Solicitar Resgate' },
+    { id: 'minha-adocao', local: './minhasolicitacao.html', icone: '&#x1F4CB;', label: 'Minha Solicitação' },
+    { id: 'adocao',  local: './adocao.html',     icone: '&#x1F43E;', label: 'Adotar Animal' },
+  ],
+  candidato: [
+    { id:'home', local: '../home.html',  icone: '&#x1F3E0;', label: 'Início' },
+    { id: 'meu-pet', local: './meuPet.html',    icone: '&#x1F436;', label: 'Meu Pet' },
+    { id: 'castracaoT', local: './solicitarcastracao.html', icone: '&#x1FA7A;', label: 'Solicitar Castração' },
+    { id: 'resgateT', local: './solicitarresgate.html',   icone: '&#x1F6A8;', label: 'Solicitar Resgate' },
+    { id: 'minha-adocao', local: './minhasolicitacao.html', icone: '&#x1F4CB;', label: 'Minha Solicitação' },
+    { id: 'adocao',  local: './adocao.html',     icone: '&#x1F43E;', label: 'Adotar Animal' },
   ],
 };
 
@@ -157,23 +167,15 @@ function alterarCadastroPet(id) {
   var peso = document.getElementById('AlteraPeso').value;
   var inputCastrado = document.querySelector('input[name="AlteraOpcao"]:checked');
 
-  // alert('nome: ' + nomePet + '\n' +
-  //   'especie: ' + especie + '\n' +
-  //   'raca: ' + raca + '\n' +
-  //   'idade: ' + idade + '\n' +
-  //   'sexo: ' + sexo + '\n' +
-  //   'peso: ' + peso + '\n' +
-  //   'inputCastrado: ' + inputCastrado + '\n'
-  // );
 
   if (nomePet != "" && especie != "" && raca != "" && idade != "" && sexo != "" && peso != "" && inputCastrado != null) {
 
     var castrado = inputCastrado.value;
 
     if (especie == "Cão") {
-      var foto = '🐶';
+      var foto = '&#x1F436';
     } else {
-      var foto = '🐱';
+      var foto = '&#x1F431';
     }
 
     var Pet = {
@@ -259,9 +261,9 @@ function salvarCadastroPet() {
     }
 
     if (especie == "Cão") {
-      var foto = '🐶';
+      var foto = '&#x1F436';
     } else {
-      var foto = '🐱';
+      var foto = '&#x1F431';
     }
 
     var novoPet = {
