@@ -34,17 +34,20 @@ const MENUS = {
     { id: 'adocao',  local: './Tutor/adocao.html',     icone: '&#x1F43E;', label: 'Adotar Animal' },
   ],
   ong: [
-    { id:'home', local: 'dashboard',  icone: '&#x1F3E0', label: 'Início' },
-    { id: 'animais-ong', local: 'animais-ong', icone: '🐾', label: 'Animais Cadastrados' },
-    { id: 'resgates-ong', local: 'resgates-ong', icone: '🚑', label: 'Resgates' },
-    { id: 'relatorio-ong', local: 'relatorio-ong', icone: '📊', label: 'Relatório' },
+    { id:'home', local: 'home.html',  icone: '&#x1F3E0', label: 'Início' },
+    { id: 'animais-ong', local: './Ong/animaiscadastrados.html', icone: '&#x1F436;', label: 'Animais Cadastrados' },
+    { id: 'gestao-castracao', local: './Ong/castracoes.html', icone: '&#x1FA7A;', label: 'Castrações' },
+    { id: 'gestao-denuncias', local: './Ong/denuncias.html', icone: '&#x1F6A8;', label: 'Denúncias' },
+    { id: 'resgates-ong', local: './Ong/resgates.html', icone: '&#128657;', label: 'Resgates' },
+    { id: 'relatorio-ong', local: './Ong/relatorio.html', icone: '&#128202;', label: 'Relatório' },
   ],
   prefeitura: [
-    { id:'home', local: 'dashboard',   icone: '&#x1F3E0', label: 'Painel Geral' },
-    { id: 'gestao-animais', local: 'gestao-animais', icone: '🐾', label: 'Gestão de Animais' },
-    { id: 'gestao-adocoes', local: 'gestao-adocoes', icone: '❤️', label: 'Adoções' },
-    { id: 'gestao-castracao', local: 'gestao-castracao', icone: '✂️', label: 'Castrações' },
-    { id: 'gestao-denuncias', local: 'gestao-denuncias', icone: '📣', label: 'Denúncias' },
+    { id:'home', local: 'home.html',  icone: '&#x1F3E0', label: 'Início' },
+    { id: 'animais-ong', local: './Ong/animaiscadastrados.html', icone: '&#x1F436;', label: 'Animais Cadastrados' },
+    { id: 'gestao-castracao', local: './Ong/castracoes.html', icone: '&#x1FA7A;', label: 'Castrações' },
+    { id: 'gestao-denuncias', local: './Ong/denuncias.html', icone: '&#x1F6A8;', label: 'Denúncias' },
+    { id: 'resgates-ong', local: './Ong/resgates.html', icone: '&#128657;', label: 'Resgates' },
+    { id: 'relatorio-ong', local: './Ong/relatorio.html', icone: '&#128202;', label: 'Relatório' },
   ]
 };
 

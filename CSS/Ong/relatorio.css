@@ -1,11 +1,9 @@
-/*Variasveis do projeto para mudar tude de uma vez*/
 :root {
     --verde-esc: #2d6a4f;
     --verde: #40916c;
     --verde-cla: #74c69d;
     --verde-lt: #d8f3dc;
     --laranja: #f4845f;
-    --laranja-esc: #e05c35;
     --cinza: #e0e0d8;
     --texto: #1b1b1b;
     --branco: #ffffff;
@@ -33,7 +31,7 @@ body {
 
 
 
-/*Barra de cima*/
+
 .topo {
     background: var(--verde-esc);
     color: var(--branco);
@@ -45,7 +43,7 @@ body {
 }
 
 
-/* menu da esquerda */
+
 .topo-menu {
     display: flex;
     align-items: center;
@@ -65,7 +63,6 @@ body {
 
     width: 25px;
     height: 25px;
-    /* deixa o icone de preto para branco */
     filter: invert(1);
 }
 
@@ -75,7 +72,6 @@ body {
 }
 
 
-/* perfil da direita */
 .topo-perfil {
     display: flex;
     align-items: center;
@@ -96,7 +92,7 @@ body {
     background: var(--verde-cla);
 }
 
-/* Botão sair */
+
 .btn-sair {
     background: var(--verde);
     border: none;
@@ -113,14 +109,14 @@ body {
 }
 
 
-/* area embaixo do topo */
+
 .area-principal {
     display: flex;
     flex: 1;
     overflow-x: hidden;
 }
 
-/* menu-lateral lateral */
+
 nav.menu-lateral.aberto {
     display: block;
 }
@@ -139,8 +135,8 @@ nav.menu-lateral {
 nav.menu-lateral a {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 20px;
+    gap: 11px;
+    padding: 11px 22px;
     color: var(--branco);
     font-weight: bold;
     text-decoration: none;
@@ -148,16 +144,16 @@ nav.menu-lateral a {
 }
 
 nav.menu-lateral a:hover,
-nav.menu-lateral a#minha-adocao {
+nav.menu-lateral a#home {
     background: var(--verde-lt);
     color: var(--verde);
 }
 
 nav.menu-lateral a .icone {
+    font-weight: bold;
     text-align: center;
 }
 
-/* conteúdo */
 
 .conteudo {
     margin: 10px;
@@ -183,7 +179,6 @@ nav.menu-lateral a .icone {
 
 
 
-/*Parte Referência*/
 .titulo {
     font-size: 25px;
     color: var(--verde-esc);
@@ -192,64 +187,38 @@ nav.menu-lateral a .icone {
     padding-left: 12px;
 }
 
+.dash-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.dash-card {
+    background: var(--branco);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+.dash-card .numero {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--verde);
+    font-family: 'Playfair Display', serif;
+}
+
+.dash-card .rotulo {
+    font-size: 12px;
+    font-weight: 700;
+    color: #777;
+    text-transform: uppercase;
+}
+
 .card {
     background: var(--branco);
     border-radius: var(--radius);
     box-shadow: var(--sombra);
-    padding: 25px;
-    max-width:600px;
-}
-
-.tag {
-    padding: 5px 12px;
-    border-radius: 100px;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.tag-laranja {
-    background: #fdebd0;
-    color: var(--laranja-esc);
-}
-
-.etapas {
-    display: flex;
-    margin-bottom: 20px;
-    
-}
-
-.etapa {
-    flex: 1;
-    min-width: 100px;
-    text-align: center;
-    padding: 10px;
-    background: var(--cinza);
-    font-size: 12px;
-    font-weight: 700;
-    color: #777;
-}
-
-.etapa.soli {
-    background: var(--verde);
-    color: var(--branco);
-}
-
-.etapa.ana {
-    background: var(--laranja);
-    color: var(--branco);
-}
-
-.info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-}
-
-label {
-    display: block;
-    font-weight: 700;
-    margin-top: 15px;
-    font-size: 20px;
-    color: var(--verde-esc);
+    padding: 24px;
 }

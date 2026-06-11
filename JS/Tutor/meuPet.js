@@ -225,6 +225,8 @@ function excluirCadastroPet(id) {
 
     alert(`Pet removido com sucesso!`);
 
+    sessionStorage.setItem("PETS", JSON.stringify(PETS));
+
     // 4. Atualiza a sua tela (chamando as funções que você já tem no código)
     construirConteudo();
 
