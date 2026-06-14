@@ -1,30 +1,28 @@
-// pega o perfil definido na tela de login
 let perfilAtivo = JSON.parse(sessionStorage.getItem("perfilAtivo"));
 
 
 let PETS = JSON.parse(sessionStorage.getItem("PETS"));
 
-// sessionStorage.setItem("PETS", JSON.stringify(PETS));
 
 
 
 
 const MENUS = {
   tutor: [
-    { id:'home', local: '../home.html',  icone: '&#x1F3E0;', label: 'Início' },
-    { id: 'meu-pet', local: './meuPet.html',    icone: '&#x1F436;', label: 'Meu Pet' },
+    { id: 'home', local: '../home.html', icone: '&#x1F3E0;', label: 'Início' },
+    { id: 'meu-pet', local: './meuPet.html', icone: '&#x1F436;', label: 'Meu Pet' },
     { id: 'castracaoT', local: './solicitarcastracao.html', icone: '&#x1FA7A;', label: 'Solicitar Castração' },
-    { id: 'resgateT', local: './solicitarresgate.html',   icone: '&#x1F6A8;', label: 'Solicitar Resgate' },
+    { id: 'resgateT', local: './solicitarresgate.html', icone: '&#x1F6A8;', label: 'Solicitar Resgate' },
     { id: 'minha-adocao', local: './minhasolicitacao.html', icone: '&#x1F4CB;', label: 'Minha Solicitação' },
-    { id: 'adocao',  local: './adocao.html',     icone: '&#x1F43E;', label: 'Adotar Animal' },
+    { id: 'adocao', local: './adocao.html', icone: '&#x1F43E;', label: 'Adotar Animal' },
   ],
   candidato: [
-    { id:'home', local: '../home.html',  icone: '&#x1F3E0;', label: 'Início' },
-    { id: 'meu-pet', local: './meuPet.html',    icone: '&#x1F436;', label: 'Meu Pet' },
+    { id: 'home', local: '../home.html', icone: '&#x1F3E0;', label: 'Início' },
+    { id: 'meu-pet', local: './meuPet.html', icone: '&#x1F436;', label: 'Meu Pet' },
     { id: 'castracaoT', local: './solicitarcastracao.html', icone: '&#x1FA7A;', label: 'Solicitar Castração' },
-    { id: 'resgateT', local: './solicitarresgate.html',   icone: '&#x1F6A8;', label: 'Solicitar Resgate' },
+    { id: 'resgateT', local: './solicitarresgate.html', icone: '&#x1F6A8;', label: 'Solicitar Resgate' },
     { id: 'minha-adocao', local: './minhasolicitacao.html', icone: '&#x1F4CB;', label: 'Minha Solicitação' },
-    { id: 'adocao',  local: './adocao.html',     icone: '&#x1F43E;', label: 'Adotar Animal' },
+    { id: 'adocao', local: './adocao.html', icone: '&#x1F43E;', label: 'Adotar Animal' },
   ],
 };
 
@@ -32,7 +30,6 @@ var petIdSelecionado = null;
 
 
 
-// define o laouyt de acordo com o perfi do usuario
 document.getElementById('perfil').textContent = perfilAtivo.perfil.toUpperCase();
 
 function abreMenu() {
@@ -40,17 +37,14 @@ function abreMenu() {
   construirMenu()
 }
 
-// zera o perfil e volta pro login
+
 function sair() {
   perfilAtivo = null;
   window.location.href = "../../index.html";
 }
 
 
-// obejeto de cada menu de acordo com o perfil
 
-
-// função que cria o menu da lateral de acordo com cada perfil
 function construirMenu() {
   const menu = document.getElementById('menu-lateral');
   const itens = MENUS[perfilAtivo.perfil] || [];
@@ -217,17 +211,16 @@ function excluirCadastroPet(id) {
   var indice = PETS.findIndex(pet => pet.p_id == id);
 
 
-  // 2. Verifica se o pet realmente foi encontrado (se é diferente de -1)
+
   if (indice != -1) {
 
-    // 3. Remove 1 elemento exatamente na posição que encontramos
+
     PETS.splice(indice, 1);
 
     alert(`Pet removido com sucesso!`);
 
     sessionStorage.setItem("PETS", JSON.stringify(PETS));
 
-    // 4. Atualiza a sua tela (chamando as funções que você já tem no código)
     construirConteudo();
 
   } else {

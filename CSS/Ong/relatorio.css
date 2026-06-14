@@ -189,7 +189,6 @@ nav.menu-lateral a .icone {
 
 .dash-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 16px;
     margin-bottom: 24px;
 }
@@ -214,11 +213,4 @@ nav.menu-lateral a .icone {
     font-weight: 700;
     color: #777;
     text-transform: uppercase;
-}
-
-.card {
-    background: var(--branco);
-    border-radius: var(--radius);
-    box-shadow: var(--sombra);
-    padding: 24px;
 }
